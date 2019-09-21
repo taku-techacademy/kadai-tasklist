@@ -1,3 +1,4 @@
+<% if logged_in? %>
 <h1>タスク一覧</h1>
 
 <ul>
@@ -7,3 +8,8 @@
 </ul>
 
 <%= link_to '新規タスクの投稿', new_task_path %>
+<%= link_to 'Log_out', logout_path %>
+
+<% else %>
+<%= link_to 'Log_in', login_path %>
+<% end %>
